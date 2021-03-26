@@ -26,16 +26,17 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         registry: docker.io
         image: chekote/node:14.8.0-alpine
-        options: -v ${{ github.workspace }}/ui/frontend:/ui
+        options: -v ${{ github.workspace }}:/work
         run: |
           echo "Running Script"
           pwd
           ls -la
-          cd ui
+          cd work/ui/frontend
           ls -la 
           pwd
           yarn install
           yarn build
+          ls -la
       # run: |
       #   export RV=${{ env.RELEASE_VERSION }}
       #   echo "RV set to $RV"
