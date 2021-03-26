@@ -26,6 +26,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         registry: docker.io
         image: chekote/node:14.8.0-alpine
+        options: -v ${{ github.workspace }}/ui/frontend:/ui
         run: |
           echo "Running Script"
           pwd
