@@ -25,4 +25,5 @@ jobs:
         echo "RV set to $RV"
         if [ "$RV" == "main" ] || [ "$RV" == "" ] ; then export RV=latest; fi
         echo "RV set to $RV"
+        chmod g+w ./ui
         make docker-ui
