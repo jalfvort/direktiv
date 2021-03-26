@@ -31,9 +31,11 @@ jobs:
           echo "Running Script"
           pwd
           ls -la
+          echo "/"
+          ls -la /
           cd workdir
           ls -la
-          cd work/ui/frontend
+          cd /work/ui/frontend
           ls -la 
           pwd
           yarn install
