@@ -31,6 +31,8 @@ jobs:
           echo "Running Script"
           pwd
           ls -la
+          cd workdir
+          ls -la
           cd work/ui/frontend
           ls -la 
           pwd
