@@ -101,7 +101,7 @@ build-ui-frontend:
 .PHONY: docker-ui
 docker-ui:
 	echo "building app"
-	la -la /
+	ls -la /
 	if [ ! -d ${mkfile_dir_main}/build/docker/ui/web ]; then \
 		docker run -v ${mkfile_dir_main}/ui/frontend:/ui chekote/node:14.8.0-alpine /bin/sh -c "id; ls -la /; chmod +w /ui; ls -la /; ls -la /ui; cd /ui && yarn install && NODE_ENV=production yarn build"; \
 	fi
